@@ -1,13 +1,8 @@
 class Solution {
-    public int climbStairs(int n) {
-        if(n<=2){
-            return n;}
-            int a=1;int b=2;
-            for(int i=3;i<=n;i++){
-                int temp=b;
-                 b=a+b;
-                a=temp;
-            }
-            return b;
-    }
+    public boolean canMakeArithmeticProgression(int[] arr) {
+        Arrays.sort(arr);
+        int d=arr[1]-arr[0];
+        for(int i=1;i<arr.length-1;i++){
+        if(arr[i+1]-arr[i]!=d){return false;}
+    }return true;}
 }
